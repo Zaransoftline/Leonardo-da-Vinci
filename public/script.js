@@ -117,7 +117,7 @@ if (button && menu) {
         }
 
         window.addEventListener('resize', () => {
-            if (window.innerWidth >= 600 && menu.classList.contains('visible') {
+            if (window.innerWidth >= 600 && menu.classList.contains('visible')) {
                 menu.classList.remove('visible');
                 body.style.overflowY = 'scroll';
                 button.checked = false;
