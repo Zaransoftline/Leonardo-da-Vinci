@@ -398,9 +398,10 @@ body {
     color: #2e2e2e;
     max-width: 800px;
     width: 100%;
-    height: 500px;
+    height: 200px;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    text-align: center;
+    display: flex;
 }
 
 .read-more-btn {
@@ -409,10 +410,17 @@ body {
     border: 1px solid #000;
     box-sizing: border-box;
     font-family: "Raleway", system-ui;
-    font-size: 30px;
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparenr;
+    transition: 0.3s;
+}
+
+.read-more-btn:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 @media (max-width: 600px) {
