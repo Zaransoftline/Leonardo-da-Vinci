@@ -406,7 +406,7 @@ body {
     overflow: hidden;
     text-align: center;
     display: flex;
-    trasition: 0.3s;
+    transition: 0.3s;
 }
 
 .read-more-btn {
