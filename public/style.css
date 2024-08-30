@@ -377,6 +377,10 @@ body {
     padding-inline: 4vw;
 }
 
+.about {
+    padding-bottom: 150px;
+}
+
 .section-content {
     max-width: 1400px;
     width: 100%;
@@ -414,8 +418,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparenr;
+    background-color: transparent;
     transition: 0.3s;
+    margin-top: 50px;
 }
 
 .read-more-btn:hover {
