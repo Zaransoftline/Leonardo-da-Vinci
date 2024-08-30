@@ -354,12 +354,22 @@ body {
 }
 
 .menu-nav-list {
-    display: none;
+    display: flex;
     flex-direction: column;
     row-gap: 30px;
     list-style: none;
 }
 
+.menu-nav-link {
+    color: white;
+    font-family: "Raleway", system-ui;
+    font-size: 30px;
+    position: relative;
+    transition: 0.3s;
+    height: 100%;
+    font-weight: 500;
+    cursor: pointer;
+}
 
 @media (max-width: 600px) {
     .hamburger-menu {
@@ -368,6 +378,10 @@ body {
 
     .nav-list {
         display: none;
+    }
+
+    .preloader-text {
+        font-size: 50px;
     }
 }
 
