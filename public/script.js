@@ -130,5 +130,5 @@ const readMoreBtn = document.getElementById('read-more');
 const text = document.getElementById('about-text');
 
 readMoreBtn.addEventListener('click', () => {
-   text.style.height = 'fit-content'; 
+   text.style.height = '100%'; 
 });
