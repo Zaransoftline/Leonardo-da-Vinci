@@ -432,7 +432,7 @@ body {
     width: 100%;
     height: 200px;
     overflow: hidden;
-    text-align: center;
+    text-align: start;
     display: flex;
     transition: 0.5s height;
     margin-top: 20px;
