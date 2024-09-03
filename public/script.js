@@ -1,17 +1,4 @@
-document.onreadystatechange = function() {
-    if (this.readyState !== 'complete') {
-        document.querySelector("body").style.visibility = 'hidden';
-        document.querySelector(".preloader").style.visibility = 'visible';
-        document.querySelector("body").style.overflowY = 'hidden';
-    } else {
-        setTimeout(() => {
-            document.querySelector("body").style.visibility = 'visible';
-            document.querySelector(".preloader").style.transform = 'translateY(100%)';
-            document.querySelector(".preloader").style.visibility = 'hidden';
-            document.querySelector("body").style.overflowY = 'scroll';
-        }, 2000); // 2-second delay
-    }
-};
+
 
 
 const img1 = document.getElementById('img1');
@@ -103,32 +90,21 @@ setInterval(nextSlide, 10000);
 
 
 
-const body = document.getElementById('body');
-const button = document.getElementById('menu__toggle');
-const menu = document.getElementById('menu');
-
-if (button && menu) {
-    button.addEventListener('click', () => {
-        menu.classList.toggle('visible');
-        if (menu.classList.contains('visible')) {
-            body.style.overflowY = 'hidden';
-        } else {
-            body.style.overflowY = 'scroll';
-        }
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 600 && menu.classList.contains('visible')) {
-                menu.classList.remove('visible');
-                body.style.overflowY = '';
-                button.checked = false;
-            }
-        });
-    });
-}
 
 const readMoreBtn = document.getElementById('read-more');
 const text = document.getElementById('about-text');
+let textSwitch = false;
 
 readMoreBtn.addEventListener('click', () => {
-   text.style.height = '100%'; 
+    if (textSwitch === false) {
+        text.style.height = '100%'; 
+        text.classList.remove('shadow');
+        readMoreBtn.innerHTML = 'Close';
+        textSwitch = true;
+    } else {
+        text.style.height = '200px'; 
+        text.classList.add('shadow');
+        readMoreBtn.innerHTML = 'Read More';
+        textSwitch = false;
+    }
 });

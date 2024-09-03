@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nazarii L</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./images/logo.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,14 +28,14 @@
     <header class="header">
         <div class="topbar">
             <nav class="nav">
-                <a class="logo">
+                <a class="logo" href="#">
                     <img class="logo-img" src="./images/logo.svg">
                 </a>
 
                 <ul class="nav-list">
-                    <li><a class="nav-link">About</a></li>
-                    <li><a class="nav-link">Work</a></li>
-                    <li><a class="nav-link">Contact</a></li>
+                    <li><a class="nav-link" href="#about">About</a></li>
+                    <li><a class="nav-link" href="#work">Work</a></li>
+                    <li><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
 
                 <div class="hamburger-menu">
@@ -52,9 +52,9 @@
       <div class="menu-content">
         <ul class="menu-nav-list" id="menu-nav-list">
 
-          <li><a class="menu-nav-link">About</a></li>
-          <li><a class="menu-nav-link">Work</a></li>
-          <li><a class="menu-nav-link">Contact</a></li>
+          <li><a class="menu-nav-link" href="#about">About</a></li>
+          <li><a class="menu-nav-link" href="#work">Work</a></li>
+          <li><a class="menu-nav-link" href="#contact">Contact</a></li>
         </ul>
       </div>
     </aside>
@@ -86,8 +86,8 @@
       </section>
 
     <main>
-        <section class="section about">
-            <div class="section-content about-content">
+        <section class="section about" id="about">
+            <div class="section-content about-content" id="content">
                 <h1 class="section-header about-header">About</h1>
 
                 <div class="about-text" id="about-text">
@@ -113,8 +113,123 @@
                 <button class="read-more-btn" id="read-more">Read More</button>
             </div>
         </section>
+
+        <section class="section work" id="work">
+            <div class="section-content work-content" id="content">
+                <h1 class="section-header work-header">Paintings</h1>
+
+                <div class="cards">
+                  <div class="card">
+                    <img class="card-img" src="./images/Museo-Cenacolo-Vinciano-Dentro-Il-Cenacolo-Milano-Copie-e-derivazioni-della-Cena-Ultima-Cena-Ponte-Capriasca.jpg">
+                    
+                    <div class="card-content">
+                      <div class="card-text">
+                        <h3 class="card-header">The Last Supper (Il Cenacolo)</h3>
+                      
+                        <h5 class="card-sub">
+                          The Last Supper is a mural depicting the moment Jesus 
+                          announces that one of his disciples will betray him...
+                        </h5>
+                      </div>
+                      <a class="card-link" href="./the-last-supper.html">
+                        <span>Learn More</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img class="card-img" src="./images/parigi_museo_louvre_05_gioconda_jpg_1920_1080_cover_70.jpg">
+                    
+                    <div class="card-content">
+                      <div class="card-text">
+                        <h3 class="card-header">Mona Lisa (La Gioconda)</h3>
+                      
+                        <h5 class="card-sub">
+                          The Mona Lisa is perhaps the most famous painting in the world. 
+                          It features a portrait of a woman with an enigmatic expression...
+                        </h5>
+                      </div>
+                      <a class="card-link" href="./mona-lisa.html">
+                        <span>Learn More</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <img class="card-img" src="./images/vitruvian-man.webp">
+                    
+                    <div class="card-content">
+                      <div class="card-text">
+                        <h3 class="card-header">Vitruvian Man</h3>
+                      
+                        <h5 class="card-sub">
+                          The Vitruvian Man is not a traditional painting but rather a 
+                          drawing that has become one of da Vinci's most recognized works...
+                        </h5>
+                      </div>
+                      <a class="card-link" href="./vitruvian-man.html">
+                        <span>Learn More</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <div class="contact-content">
+              <h1 class="section-header contact-header">Contact Us</h1>
+              <form class="form" action="/api/send-email" method="post" id="form">
+                  <div class="form-left">
+                      <div class="inputs">
+                          <div class="input-container">
+                              <input type="text" class="input" name="name">
+                              <label class="label" for="name">Name</label>
+                          </div>
+              
+                          <div class="input-container">
+                              <input type="email" class="input" name="email">
+                              <label class="label" for="email">Email</label>
+                          </div>
+              
+                          
+                          <div class="contact-info">
+                              <a class="contact-link" href="tel:+12345678901">+1 234 567 8901</a>
+                              <a class="contact-link" href="mailto:123@example.com">123@example.com</a>
+                          </div>
+                      </div>
+                      <textarea name="message" placeholder="Message..."></textarea>
+              
+                      <div class="buttons">
+                          <button class="submit-btn" type="submit">Submit!</button>
+                          <a class="return-btn" href="#">
+                              <img class="return-img" src="./images/return.svg">
+                          </a>
+                      </div>
+                  </div>
+              </form>
+              
+          </div>
+      </section>
     </main>
 
+    <footer class="footer">
+      <div class="footer-content">
+        <a class="logo" href="./images/logo.svg">
+          <img class="logo-img" src="./images/logo.svg">
+        </a>
+
+        <ul class="nav-list footer-nav-list">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#work">Work</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="./menu.js"></script>
     <script src="./script.js"></script>
+    <script src="./inputs.js"></script>
+    <script src="./loader.js"></script>
 </body>
 </html>
